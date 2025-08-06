@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: rhdh-rc-17-go-github-jenkins-quay-r 
+  janus-idp.io/tekton: rhdh-rc-17-go-github-jenkins-quay-r
+  backstage.io/kubernetes-id: rhdh-rc-17-go-github-jenkins-quay-r
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: rhdh-rc-17-go-github-jenkins-quay-r
+resources:
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
